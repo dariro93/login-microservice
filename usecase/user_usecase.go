@@ -3,7 +3,7 @@ package usecase
 import (
 	"login-micro/entities"
 	"login-micro/usecase/dataprovider"
-	controllerModel "login-micro/controllers/model"
+	controllerModel "login-micro/controllers/rest/model"
 )
 
 // UsersUseCase is the interface exporting users' manager behaviour as a dependency

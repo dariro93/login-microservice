@@ -2,14 +2,13 @@ package graphql
 
 import (
 	"fmt"
-	"login-micro/dataprovider/configuration"
+	"login-micro/dataprovider"
 )
 
 type Graphql struct {
-
 }
 
-func NewGraphqlApp(dbtype configuration.DBType) *Graphql {
+func NewGraphqlApp(dbtype dataprovider.Database) *Graphql {
 	fmt.Println("Not implemented yet...")
 	return &Graphql{}
 }

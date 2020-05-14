@@ -1,4 +1,4 @@
-package controllers
+package rest
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"login-micro/controllers/model"
+	"login-micro/controllers/rest/model"
 	"login-micro/usecase"
 	"github.com/gorilla/mux"
 	"strconv"

@@ -25,7 +25,9 @@ func main() {
 	router.HandleFunc("/users/{id}", controllers.GetUserByID).Methods(http.MethodGet)
 	log.Fatal(http.ListenAndServe(":8081", router))*/
 
-	app := app_creator.CreateApp()
-	app.StartApp()
+	/*app := app_creator.CreateApp()
+	app.StartApp()*/
 
+	app := app_creator.CreateApp()
+	app.StartServer()
 }

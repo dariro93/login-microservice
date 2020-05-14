@@ -8,30 +8,33 @@ import (
 type AppType utils.Enum
 
 type (
-	RestAppType struct{}
-	GraphqlAppType struct{}
+	OnPremAppType struct{}
+	CloudAppType struct{}
+
 )
 
-func (RestAppType) Int() int {
+func (OnPremAppType) Int() int {
 	return 1
 }
 
-func (RestAppType) String() string {
-	return "RESTAPP"
+func (OnPremAppType) String() string {
+	return "ON PREMISE APP"
 }
 
-func (GraphqlAppType) Int() int {
+func (CloudAppType) Int() int {
 	return 2
 }
 
-func (GraphqlAppType) String() string {
-	return "GRAPHQL APP"
+func (CloudAppType) String() string {
+	return "CLOUD APP"
 }
 
 func RetrieveAppTypeByName(name string) (AppType, error) {
 	switch (name) {
-	case "rest":
-		return RestAppType{}, nil
+	case "onprem":
+		return OnPremAppType{}, nil
+	case "cloud":
+		return CloudAppType{}, nil
 	default:
 		return nil, fmt.Errorf("There is no such app type: %s", name)
 	}
